@@ -29,7 +29,7 @@ The following features are available:
 | Feature                                   | Supported | Actions                                 | Remarks           |
 | ----------------------------------------- | --------- | --------------------------------------- | ----------------- |
 | **Account Lifecycle**                     | ✅         | Create, Update                          |                   |
-| **Permissions**                           | ❌         | -                                       | Static or Dynamic |
+| **Permissions**                           | ❌         | -                                       |                   |
 | **Resources**                             | ❌         | -                                       |                   |
 | **Entitlement Import: Accounts**          | ❌         | -                                       |                   |
 | **Entitlement Import: Permissions**       | ❌         | -                                       |                   |
@@ -51,7 +51,7 @@ The following settings are required to connect to the CSV file.
 | Setting                | Description                                                                                                                               | Mandatory |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | CSV File Path          | Full path to the CSV file                                                                                                                 | Yes       |
-| Encoding               | Encoding used (e.g. `utf-8`, `ascii`). Default value is: utf-8`                                                                           | Yes       |
+| Encoding               | Encoding used (e.g. `utf-8`, `ascii`). Default value is: `utf-8`                                                                          | Yes       |
 
 ## Correlation configuration
 
