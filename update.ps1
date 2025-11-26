@@ -7,8 +7,6 @@
 # Enable TLS1.2
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
-#region functions
-#endregion functions
 
 #region account
 # Define correlation
@@ -65,40 +63,6 @@ try {
         $actionMessage = "comparing current account to mapped properties"
 
         # Set Previous data (if there are no changes between PreviousData and Data, HelloID will log "update finished with no changes")
-        <#$outputContext.PreviousData = [PsCustomObject]@{
-            "Code_Pers_Lid"       = $currentRow."Code pers. Lid"
-            "Naam_Pers_Lid"       = $currentRow."Naam pers. Lid"
-            "Voorletters"         = $currentRow."Voorletters"
-            "Tussenvoegsels"      = $currentRow."Tussenvoegsels"
-            "Functie"             = $currentRow."Functie"
-            "Datum_In_Dienst"     = $currentRow."Datum in dienst"
-            "Datum_Uit_Dienst"    = $currentRow."Datum uit dienst"
-            "Roepnaam"            = $currentRow."Roepnaam"
-            "Afdeling"            = $currentRow."Afdeling"
-            "Bieb_Rappel"         = $currentRow."Bieb Rappel"
-            "Bevoegden"           = $currentRow."Bevoegden"
-            "Case_Attendering"    = $currentRow."Case Attendering"
-            "Case_Rappel"         = $currentRow."Case Rappel"
-            "Case_Werkvoorraad"   = $currentRow."Case Werkvoorraad"
-            "Code_Org_Eenheid"    = $currentRow."Code org. Eenheid"
-            "Dossier_Rappel"      = $currentRow."DossierRappel"
-            "Geboortedatum"       = $currentRow."Geboortedatum"
-            "Gebouw"              = $currentRow."Gebouw"
-            "Geslacht"            = $currentRow."Geslacht"
-            "Notitie"             = $currentRow."Notitie"
-            "Organisatie"         = $currentRow."Organisatie"
-            "Post_Attendering"    = $currentRow."Post Attendering"
-            "Post_Rappel"         = $currentRow."Post Rappel"
-            "Post_Signalering"    = $currentRow."Post Signalering"
-            "Rol"                 = $currentRow."Rol"
-            "Ruimte"              = $currentRow."Ruimte"
-            "Taakverdeler"        = $currentRow."Taakverdeler"
-            "Telefoon"            = $currentRow."Telefoon"
-            "Telefoon2"           = $currentRow."Telefoon2"
-            "Titels"              = $currentRow."Titels"
-            "Email"               = $currentRow."E-mail"
-        }
-#>
         $outputContext.PreviousData = $currentRow | Select-Object -First 1
 
         # Create reference object from correlated account
